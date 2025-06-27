@@ -32,7 +32,7 @@ export default function Home() {
       <main className={styles.main}>
   <h1 className={styles.title}>Enter The Realm Of Obedience</h1>
 
-  <p style={{ textAlign: 'center', color: '#ffcccc' }}
+  <p style={{ textAlign: 'center', color: '#ffcccc' }}>
     This is not a place for the curious.<br />
     It is a sanctuary for the surrendered — a sanctum of silence, strength and scarlet surrender.<br /><br />
 
