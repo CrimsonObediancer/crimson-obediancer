@@ -39,7 +39,7 @@ export default function Home() {
     Step forward, if you are called.<br />
       Kneel, if you are chosen.<br />
     The Crimson Obediancer awaits not worship, but obedience.
-  </p>
+  </p></p>
 
   <div style={{ marginTop: '2rem' }}>
     <a href="/about" className={styles.navlink}>Learn the Origin</a> &nbsp;&nbsp;
