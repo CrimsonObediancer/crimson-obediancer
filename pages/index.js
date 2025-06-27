@@ -36,19 +36,16 @@ export default function Home() {
     This is not a place for the curious.<br /><br />
     It is a sanctuary for the surrendered.<br /><br />
     Enter a sanctum of silence, strength and scarlet surrender.<br /><br />
-
     Step forward, if you are called.<br /><br />
-      Kneel, if you are chosen.<br /><br />
+    Kneel, if you are chosen.<br /><br />
     The Crimson Obediancer awaits not worship, but obedience.
-  </p></p>
-
-  <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-  <p>
-    <a href="/about" className={styles.navlink}>Learn</a> &nbsp;&nbsp;
-    <a href="/application" className={styles.navlink}>Submit</a> &nbsp;&nbsp;
-    <a href="/subscribe" className={styles.navlink}>Commit</a>
   </p>
-</div>
+
+  <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem' }}>
+    <a href="/about" className={styles.navlink}>Learn</a>
+    <a href="/application" className={styles.navlink}>Submit</a>
+    <a href="/subscribe" className={styles.navlink}>Commit</a>
+  </div>
 </main>
 
     </div>
