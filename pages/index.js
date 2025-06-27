@@ -30,13 +30,14 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-  <h1 className={styles.title}>Enter the Obedience</h1>
+  <h1 className={styles.title}>Enter The Realm Of Obedience</h1>
 
   <p style={{ color: '#ffcccc', marginTop: '1rem', fontSize: '1.1rem' }}>
     This is not a place for the curious.<br />
-    It is a sanctuary for the surrendered — a sanctum of silence, strength, and scarlet will.<br /><br />
+    It is a sanctuary for the surrendered — a sanctum of silence, strength and scarlet surrender.<br /><br />
 
-    Step forward, if you are called. Kneel, if you are chosen. 
+    Step forward, if you are called.<br />
+      Kneel, if you are chosen.<br />
     The Crimson Obediancer awaits not worship, but obedience.
   </p>
 
