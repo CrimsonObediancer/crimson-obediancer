@@ -47,7 +47,6 @@ export default function Home() {
     <a href="/application" className={styles.navlink}>Submit</a> &nbsp;&nbsp;
     <a href="/subscribe" className={styles.navlink}>Commit</a>
       </p>
-</div>
 </main>
 
     </div>
