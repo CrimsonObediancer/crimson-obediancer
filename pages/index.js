@@ -42,7 +42,7 @@ export default function Home() {
     The Crimson Obediancer awaits not worship, but obedience.
   </p></p>
 
-  <div style={{ width: '80%', margin: '0 auto' }}>
+  <div style={{ textAlign: 'center' }}>
      <p><a href="/about" className={styles.navlink}>Learn</a> &nbsp;&nbsp;
     <a href="/application" className={styles.navlink}>Submit</a> &nbsp;&nbsp;
     <a href="/subscribe" className={styles.navlink}>Commit</a>
