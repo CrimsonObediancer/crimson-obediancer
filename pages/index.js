@@ -33,18 +33,19 @@ export default function Home() {
   <h1 className={styles.title}>Enter The Realm Of Obedience</h1>
 
   <p style={{ textAlign: 'center', color: '#ffcccc' }}>
-    This is not a place for the curious.<br />
-    It is a sanctuary for the surrendered — a sanctum of silence, strength and scarlet surrender.<br /><br />
+    This is not a place for the curious.<br /><br />
+    It is a sanctuary for the surrendered.<br /><br />
+    Enter a sanctum of silence, strength and scarlet surrender.<br /><br />
 
-    Step forward, if you are called.<br />
-      Kneel, if you are chosen.<br />
+    Step forward, if you are called.<br /><br />
+      Kneel, if you are chosen.<br /><br />
     The Crimson Obediancer awaits not worship, but obedience.
   </p></p>
 
-  <div style={{ marginTop: '2rem' }}>
-    <a href="/about" className={styles.navlink}>Learn the Origin</a> &nbsp;&nbsp;
-    <a href="/application" className={styles.navlink}>Offer Your Service</a> &nbsp;&nbsp;
-    <a href="/subscribe" className={styles.navlink}>Stay Connected</a>
+  <div style={{ width: '80%', margin: '0 auto' }}>
+    <a href="/about" className={styles.navlink}>Learn</a> &nbsp;&nbsp;
+    <a href="/application" className={styles.navlink}>Submit</a> &nbsp;&nbsp;
+    <a href="/subscribe" className={styles.navlink}>Commit</a>
   </div>
 </main>
 
