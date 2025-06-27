@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Crimson WP Blog</title>
+        <title>The Crimson Obediancer</title>
         <meta name="description" content="A dark, seductive WordPress-powered site using React and a crimson theme." />
       </Head>
 
@@ -30,14 +30,23 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Crimson WP Blog</h1>
-        {posts.length > 0 ? posts.map(post => (
-          <div key={post.id} className={styles.post}>
-            <h2 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-          </div>
-        )) : <p>Loading or no posts found...</p>}
-      </main>
+  <h1 className={styles.title}>Enter the Obedience</h1>
+
+  <p style={{ color: '#ffcccc', marginTop: '1rem', fontSize: '1.1rem' }}>
+    This is not a place for the curious.<br />
+    It is a sanctuary for the surrendered — a sanctum of silence, strength, and scarlet will.<br /><br />
+
+    Step forward, if you are called. Kneel, if you are chosen. 
+    The Crimson Obediancer awaits not worship, but obedience.
+  </p>
+
+  <div style={{ marginTop: '2rem' }}>
+    <a href="/about" className={styles.navlink}>Learn the Origin</a> &nbsp;&nbsp;
+    <a href="/application" className={styles.navlink}>Offer Your Service</a> &nbsp;&nbsp;
+    <a href="/subscribe" className={styles.navlink}>Stay Connected</a>
+  </div>
+</main>
+
     </div>
   );
 }
