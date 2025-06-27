@@ -43,10 +43,10 @@ export default function Home() {
   </p></p>
 
   <div style={{ width: '80%', margin: '0 auto' }}>
-    <a href="/about" className={styles.navlink}>Learn</a> &nbsp;&nbsp;
+     <p><a href="/about" className={styles.navlink}>Learn</a> &nbsp;&nbsp;
     <a href="/application" className={styles.navlink}>Submit</a> &nbsp;&nbsp;
     <a href="/subscribe" className={styles.navlink}>Commit</a>
-  </div>
+      </p></div>
 </main>
 
     </div>
