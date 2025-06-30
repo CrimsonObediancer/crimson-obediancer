@@ -1,53 +1,70 @@
 
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import { useState } from 'react';
+import Layout from '../components/Layout'; // 👈 NEW
 
-export default function Home() {
-  const [posts, setPosts] = useState([]);
+export default function Application() {
+  const [status, setStatus] = useState('');
 
-  useEffect(() => {
-    axios.get('https://northerstar-online.com/wp-json/wp/v2/posts')
-      .then(res => {
-        setPosts(res.data);
-      })
-      .catch(err => {
-        console.error('Error fetching posts:', err);
-      });
-  }, []);
+  // ...rest of your handleSubmit and form code
 
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
-        <title>The Crimson Obediancer</title>
-        <meta name="description" content="A dark, seductive WordPress-powered site using React and a crimson theme." />
+        <title>Tell The Crimson Obediancer About You</title>
+        <meta name="description" content="Reveal your desires, limits, and devotion." />
       </Head>
 
-      <nav className={styles.navbar}>
-        <a className={styles.navlink} href="/">Home</a>
-        <a className={styles.navlink} href="/about">About</a>
-      </nav>
+      <form onSubmit={handleSubmit} style={{ maxWidth: '750px', margin: '0 auto', color: '#ffcccc' }}>
+  <label>
+    Name:
+    <input type="text" name="Name" required />
+  </label><br /><br />
+  <label>
+    Preferred Name:
+    <input type="text" name="PreferredName" required />
+  </label><br /><br />
+  <label>
+    Email:
+    <input type="email" name="Email" required />
+  </label><br /><br />
+  <label>
+    What does domination mean to you?
+    <textarea name="Meaning" required />
+  </label><br /><br />
+  <label>
+    Desires:
+    <textarea name="Desires" required />
+  </label><br /><br />
+  <label>
+    Limits:
+    <textarea name="Limits" required />
+  </label><br /><br />
+  <label>
+    Comfort Level:
+    <select name="Comfort" required>
+      <option value="">Select</option>
+      <option value="Light">Light</option>
+      <option value="Moderate">Moderate</option>
+      <option value="Intense">Intense</option>
+    </select>
+  </label><br /><br />
+  <label>
+    Device Ownership:
+    <select name="DeviceOwnership" required>
+      <option value="">Select</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </label><br /><br />
+  <label>
+    Other Notes:
+    <textarea name="Other" />
+  </label><br /><br />
 
-      <main className={styles.main}>
-  <h1 className={styles.title}>Enter The Realm Of Obedience</h1>
+  <button type="submit">Submit to the Obediancer</button>
+</form>
 
-  <p style={{ textAlign: 'center', color: '#ffcccc' }}>
-    This is not a place for the curious.<br /><br />
-    It is a sanctuary for the surrendered.<br /><br />
-    Enter a sanctum of silence, strength and scarlet surrender.<br /><br />
-    Step forward, if you are called.<br /><br />
-    Kneel, if you are chosen.<br /><br />
-    The Crimson Obediancer awaits not worship, but obedience.
-  </p>
-
-  <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem' }}>
-    <a href="/about" className={styles.navlink}>Learn</a>
-    <a href="/application" className={styles.navlink}>Submit</a>
-    <a href="/subscribe" className={styles.navlink}>Commit</a>
-  </div>
-</main>
-
-    </div>
+    </Layout>
   );
 }
