@@ -1,11 +1,25 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import Layout from '../components/Layout'; // 👈 NEW
+import Layout from '../components/Layout';
 
 export default function Application() {
   const [status, setStatus] = useState('');
 
-  // ...rest of your handleSubmit and form code
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyRCuNw4w5gqJnKFD8N1wVWjTyZPjSJ8ywZ2j1uqD40P_Bq6AiG65PIdHCD4cg_n6A8-Q/exec", {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      setStatus("Submission successful. The Obediancer has received your truth.");
+      e.target.reset();
+    } else {
+      setStatus("Submission failed. Try again, or kneel harder.");
+    }
+  };
 
   return (
     <Layout>
@@ -14,32 +28,66 @@ export default function Application() {
         <meta name="description" content="Reveal your desires, limits, and devotion." />
       </Head>
 
-      {/* your <form> content here */}
+      <form onSubmit={handleSubmit} style={{ maxWidth: '750px', margin: '0 auto', color: '#ffcccc' }}>
+        <h1 style={{ textAlign: 'center', color: '#990000' }}>Crimson Submission Form</h1>
+
+        <label>
+          Name:
+          <input type="text" name="Name" required />
+        </label><br /><br />
+
+        <label>
+          Preferred Name:
+          <input type="text" name="PreferredName" required />
+        </label><br /><br />
+
+        <label>
+          Email:
+          <input type="email" name="Email" required />
+        </label><br /><br />
+
+        <label>
+          What does domination mean to you?
+          <textarea name="Meaning" required />
+        </label><br /><br />
+
+        <label>
+          Desires:
+          <textarea name="Desires" required />
+        </label><br /><br />
+
+        <label>
+          Limits:
+          <textarea name="Limits" required />
+        </label><br /><br />
+
+        <label>
+          Comfort Level:
+          <select name="Comfort" required>
+            <option value="">Select</option>
+            <option value="Light">Light</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Intense">Intense</option>
+          </select>
+        </label><br /><br />
+
+        <label>
+          Device Ownership:
+          <select name="DeviceOwnership" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </label><br /><br />
+
+        <label>
+          Other Notes:
+          <textarea name="Other" />
+        </label><br /><br />
+
+        <button type="submit">Submit to the Obediancer</button>
+        <p>{status}</p>
+      </form>
     </Layout>
   );
-}
-.whisper {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: rgba(26, 0, 0, 0.9);
-  color: #ffcccc;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 12px #660000;
-  font-style: italic;
-  font-size: 1rem;
-  z-index: 999;
-  animation: fadein 2s ease-in-out;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
